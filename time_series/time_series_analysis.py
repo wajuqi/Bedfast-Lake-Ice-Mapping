@@ -164,42 +164,10 @@ if not os.path.exists(output_path):
 if not os.path.exists(bath_doy_path):
     os.makedirs(bath_doy_path)
 utm_flag = 1    #1: if Sentinel-1 images are in UTM (needs to convert shp coordinates to utm)
-'''
-UTM Zone number and Central Meridian: http://www.jaworski.ca/utmzones.htm
-#C01_Barrow(Alaska, USA): zone 4, -159.0
-#C03_Teshekpuk(Alaska, USA): zone 5, -153.0
-#C04_Mackenzie(Canada): zone 8, -135.0
-#C06_Kytalyk(Russia): zone 55, 147.0
-#C07_LenaDelta(Russia): zone 52, 129.0
-#C08_Yamal(Russia): zone 42, 69.0
-#CS12_1_Cape_Espenberg_Lowland(Alaska, USA): zone 3, -168.0
-#CS12_2_Central_Seward_Peninsula(Alaska, USA): zone 3, -168.0
-'''
 
 if code == 'C01':
     shp = shp_dir + '\\Barrow.shp'
     zone = 4
-elif code == 'C03':
-    shp = shp_dir + '\\Teshekpuk_Lake2c.shp'
-    zone = 5
-elif code == 'C04':
-    shp = shp_dir + '\\Mackenzie Delta_NWTcmodify.shp'
-    zone = 8
-elif code == 'C06':
-    shp = shp_dir + '\\Kytalyk_SiberiaC2.shp'
-    zone = 55
-elif code == 'C07':
-    shp = shp_dir + '\\Lena_delta2c.shp'
-    zone = 52
-elif code == 'C08':
-    shp = shp_dir + '\\Yamal_SiberiaC2.shp'
-    zone = 42
-elif code == 'CS12_1':
-    shp = shp_dir + '\\Cape_Espenberg_Lowland.shp'
-    zone = 3
-elif code == 'CS12_2':
-    shp = shp_dir + '\\Central_Seward_Peninsula.shp'
-    zone = 3
 else:
     print("Region code not defined.")
 
